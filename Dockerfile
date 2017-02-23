@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:latest
 # 签名
 MAINTAINER saymagic "saymagic@163.com"
 

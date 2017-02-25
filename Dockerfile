@@ -1,12 +1,13 @@
-FROM ubuntu:latest
+FROM ubuntu:14.04
 # 签名
 MAINTAINER saymagic "saymagic@163.com"
 
 # 安装JDK与nginx
-RUN apt-get update
-RUN apt-get install openjdk-7-jre -y
-RUN apt-get install openjdk-7-jdk -y
-RUN apt-get install nginx -y
+RUN apt-get update && \
+    apt-get install -y \
+    openjdk-7-jre \
+    openjdk-7-jdk \
+    nginx
 
 #拷贝nginx配置文件
 ADD ./etc/nginx-conf /etc/nginx/conf.d
